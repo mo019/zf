@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+// 引入字体图标样式
+import './assets/fonts/iconfont.css'
+
+
 // 引入全局样式
 import './index.css';
 // ant-mobile组件库样式
@@ -7,6 +12,9 @@ import 'antd-mobile/dist/antd-mobile.css'
 // 引入根组件
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

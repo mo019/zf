@@ -1,6 +1,6 @@
-/* 全局样式 */
 html,
 body {
+    height: 100%;
     color: #333;
     background: #fff;
 }
