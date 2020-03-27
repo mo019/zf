@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { Carousel,Flex,Grid,WingBlank } from 'antd-mobile';
+import { Carousel,Flex,Grid,WingBlank,SearchBar } from 'antd-mobile';
 // 获取轮播图数据
 import swiper_obtain from '../../information_after/home/swiper/swiper.json';
 // 获取宫格数据
@@ -31,6 +31,8 @@ class Index extends Component {
         swiper:[],
         groups:[],
         news:[],
+        // 顶部搜索关键词数据
+        keyword:'',
         
         // 轮播图高度
         imgHeight: 176
@@ -57,13 +59,30 @@ class Index extends Component {
          
           
       }
-
+   
       
 
     render () {
         return (
 <div>
-     {/* 轮播图 */}
+  {/* 顶部导航栏搜索 */}
+  <Flex justify="around" className="topNav">
+        <div className="searchBox">
+          <div className="city" onClick={()=>this.props.history.push('/cityList')}>
+            北京
+            <i className="iconfont icon-arrow" />
+          </div>
+          <SearchBar
+            value={this.state.keyword}
+            onChange={(v) => this.setState({ keyword: v })}
+            placeholder="请输入小区或地址"
+          />
+        </div>
+        <div className="map" onClick={()=>this.props.history.push('/map')} >
+          <i key="0" className="iconfont icon-map" />
+        </div>
+      </Flex>
+      {/* 轮播图 */}
         <Carousel
         // 控制自动播放
           autoplay
@@ -105,7 +124,7 @@ class Index extends Component {
           })}
           
       </Flex>
-
+      {/* 小组和宫格 */}
       <div className="group">
            <Flex className="group-title" justify="between">
                 <h3>租房小组</h3>
@@ -132,7 +151,11 @@ class Index extends Component {
           );
           }}
   />
-  {/* 最新资讯 */}
+ 
+            
+       </div>
+
+      {/* 最新资讯 */}
   <div className='news'>
           <h3 className='group-title'>
             最新资讯
@@ -162,9 +185,10 @@ class Index extends Component {
             }
           </WingBlank>
   </div>
-            
-       </div>
-                
+
+
+
+
 </div>
         );
     }

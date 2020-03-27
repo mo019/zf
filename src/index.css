@@ -4,6 +4,10 @@ body {
     color: #333;
     background: #fff;
 }
+/* 设置百度地图高度撑开 */
+#root,.mapBox,#container{
+    height: 100%;
+}
 
 h1,
 h2,

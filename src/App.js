@@ -20,7 +20,9 @@ function App() {
           {/* 一级路由 */}
            {/* home下面配置二级路由 */}
            <Route path='/home' component={Home} />
+           {/* 城市列表 */}
            <Route path='/cityList' component={CityList} />
+           {/* 地图找房 */}
            <Route path='/map' component={Map} />
 
            {/* 报错页面 */}
