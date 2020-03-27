@@ -1,0 +1,28 @@
+{
+    "description":"请求成功",
+   "status":200,
+    "body":[{
+            "id": 1,
+            "title":"家住回龙观",
+            "desc":"归属的感觉",
+            "imgSre":"http://s.aigei.com/src/img/png/56/56c92d7ca482449d9fa0cd58201602f6.png?imageMogr2/auto-orient/thumbnail/!222x222r/gravity/Center/crop/222x222/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:S5V_ivlQZBRsp0mVN5Qen7gpZbI="
+        },
+        {
+            "id": 2,
+            "title":"宜居四五环",
+            "desc":"大都市的生活",
+            "imgSre":"http://s.aigei.com/src/img/png/2a/2a1cb42e586847a7bebeed818a197eee.png?imageMogr2/auto-orient/thumbnail/!222x222r/gravity/Center/crop/222x222/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:Of2LRk7t5PRKIMqj61mHUWNaXr0="
+        },{
+            "id": 3,
+            "title":"喧嚣三里屯",
+            "desc":"繁华的背后",
+            "imgSre":"http://s.aigei.com/src/img/png/78/780f573e369e44fa8ed11b7a4307478b.png?imageMogr2/auto-orient/thumbnail/!222x222r/gravity/Center/crop/222x222/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:1lMWIN9_Uc69CbH4hUzLkXZJn_Y="
+        },{
+            "id": 4,
+            "title":"比邻三号线 ",
+            "desc":"地铁心连心",
+            "imgSre":"http://s.aigei.com/src/img/png/30/300997f74406484ead90d99561c6de37.png?imageMogr2/auto-orient/thumbnail/!222x222r/gravity/Center/crop/222x222/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:pY1mQCLM8Dz8EK0AgXLUoSvsgUs="
+        }
+    ]
+    
+}

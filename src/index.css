@@ -20,7 +20,8 @@ ul,li {
 }
 
 * {
-    /* touch-action: pan-y;
-    touch-action: none;  */
+    /* touch-action: pan-y; */
+    /* 设置忽略url报错 上下选一即可 */
+    touch-action: none; 
     box-sizing: border-box; 
 }

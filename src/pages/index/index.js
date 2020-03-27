@@ -1,11 +1,27 @@
 import React,{ Component } from 'react';
-import { Carousel } from 'antd-mobile';
-// 获取轮播图
+import { Carousel,Flex,Grid,WingBlank } from 'antd-mobile';
+// 获取轮播图数据
 import swiper_obtain from '../../information_after/home/swiper/swiper.json';
-import '../../assets/swiper/1.jpg'
+// 获取宫格数据
+import groups_obtain from '../../information_after/home/groups/groups.json';
+// 获取导航栏数据
+import navs_config from '../../utils/navs_config';
+// 获取最新咨询数据
+import news_obtain from '../../information_after/home/news/news.json';
+
+import '../../assets/swiper/1.jpg';
+// 样式
+import './index.scss';
+
+
 
 // 复制给变量
-const swiper_voluation = swiper_obtain 
+const swiper_voluation = swiper_obtain;
+const groups_voluation = groups_obtain;
+const new_voluation = news_obtain;
+
+
+
 
 
 class Index extends Component {
@@ -13,6 +29,8 @@ class Index extends Component {
     state = {
         // 轮播图数据
         swiper:[],
+        groups:[],
+        news:[],
         
         // 轮播图高度
         imgHeight: 176
@@ -20,17 +38,21 @@ class Index extends Component {
         
       }
 
-      a(f){
+      a(f_1,f_2,f_3){
         this.setState(()=>({
-            swiper:f
+          // 数据保存
+            swiper:f_1,
+            groups:f_2,
+            news:f_3
             
         }))
     }
 
 
       componentDidMount(){
+        // 延时加载数据
           setTimeout(()=>{
-            this.a(swiper_voluation.body)
+            this.a(swiper_voluation.body,groups_voluation.body,new_voluation.body)
           },100)
          
           
@@ -41,7 +63,7 @@ class Index extends Component {
     render () {
         return (
 <div>
-      <div>
+     {/* 轮播图 */}
         <Carousel
         // 控制自动播放
           autoplay
@@ -70,8 +92,77 @@ class Index extends Component {
             </a>
           ))}
         </Carousel>
-      </div>
-      
+      {/* 栏目导航 */}
+      <Flex className='nav'>
+
+          {navs_config.map((item) => {
+            return (
+                <Flex.Item onClick={()=> this.props.history.push(item.path)} key={item.id}>
+                   <img src={item.img} alt=''/>
+                    <p>{item.title}</p>
+                </Flex.Item>
+            )
+          })}
+          
+      </Flex>
+
+      <div className="group">
+           <Flex className="group-title" justify="between">
+                <h3>租房小组</h3>
+                <span>更多</span>
+            </Flex>
+            {/* 宫格 */}
+          {/* 宫格数据 */}
+          <Grid
+      data={this.state.groups}
+      columnNum={2}
+      // 关闭默认正方形
+      square={false}
+      hasLine={false}
+      renderItem={item => {
+          return (
+            // item结构
+            <Flex className="grid-item" justify="between">
+              <div className="desc">
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+              <img src={item.imgSre} alt="" />
+            </Flex>
+          );
+          }}
+  />
+  {/* 最新资讯 */}
+  <div className='news'>
+          <h3 className='group-title'>
+            最新资讯
+          </h3>
+          <WingBlank size='md'>
+            {
+              this.state.news.map(item => (
+                <div className="news-item" key={item.id}>
+                  <div className="imgwrap">
+                    <img
+                      className="img"
+                      src= {item.imgSrc}
+                      alt=""
+                    />
+                  </div>
+                  <Flex className="content" direction="column" justify="between">
+                    <h3 className="title">{item.title}</h3>
+                    <Flex className="info" justify="between">
+                      <span>{item.from}</span>
+                      <span>{item.date}</span>
+                    </Flex>
+                  </Flex>
+                </div>
+                )
+                )
+            }
+          </WingBlank>
+  </div>
+            
+       </div>
                 
 </div>
         );
