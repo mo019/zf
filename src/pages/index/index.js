@@ -145,6 +145,7 @@ class Index extends Component {
                     <img
                       className="img"
                       src= {item.imgSrc}
+                      // 
                       alt=""
                     />
                   </div>

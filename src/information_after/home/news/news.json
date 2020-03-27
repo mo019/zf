@@ -4,19 +4,19 @@
     "body":[{
             "id": 1,
             "title":"置业选择 | 安贞西里 河间的古雅别院",
-            "imgSre":"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3003061367,304093797&fm=26&gp=0.jpg",
+            "imgSrc":"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3003061367,304093797&fm=26&gp=0.jpg",
             "from":"新华网",
             "data":"两天前"
          },{
             "id": 2,
             "title":"置业选择 | 大理  海边的观景别墅",
-            "imgSre":"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1254841038,1633133861&fm=26&gp=0.jpg",
+            "imgSrc":"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1254841038,1633133861&fm=26&gp=0.jpg",
             "from":"新华网",
             "data":"两天前"
          },{
             "id": 3,
             "title":"置业选择 | 安贞西里 花园洋房",
-            "imgSre":"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3269773048,2569209970&fm=26&gp=0.jpg",
+            "imgSrc":"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3269773048,2569209970&fm=26&gp=0.jpg",
             "from":"新华网",
             "data":"两天前"
          }
